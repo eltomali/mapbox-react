@@ -4,7 +4,9 @@ import ReactMapGL from 'react-map-gl';
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 class Map extends Component {
-  state = {
+  constructor(props){
+    super(props);
+    this.state = {
     viewport: {
       width: 400, 
       height: 400, 
@@ -12,6 +14,8 @@ class Map extends Component {
       longitude: -122.4376, 
       zoom: 8
     }
+  }
+  
   };
   render() {
     return (
